@@ -10,7 +10,7 @@ import (
 type Task struct {
 	Slack_name      string    `json:"slack_name"`
 	Current_day     string    `json:"current_day"`
-	Utc_time        time.Time `json:"utc_time"`
+	Utc_time        string `json:"utc_time"`
 	Track           string    `json:"track"`
 	Github_file_url string    `json:"github_file_url"`
 	Github_repo_url string    `json:"github_repo_url"`
@@ -29,7 +29,7 @@ func main() {
 		task1 := Task{
 			Slack_name:      slack_name,
 			Current_day:     time.Now().Weekday().String(),
-			Utc_time:        time.Now(),
+			Utc_time:        time.Now().Format("2006-01-02T15:04:05Z"),
 			Track:           track,
 			Github_file_url: "https://github.com/jenweani/task1/blob/main/main.go",
 			Github_repo_url: "https://github.com/jenweani/task1",
