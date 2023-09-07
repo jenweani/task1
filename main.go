@@ -31,8 +31,8 @@ func main() {
 			Current_day:     time.Now().Weekday().String(),
 			Utc_time:        time.Now(),
 			Track:           track,
-			Github_file_url: "github.com/jenweani/",
-			Github_repo_url: "github.com/jenweani/",
+			Github_file_url: "https://github.com/jenweani/task1/blob/main/main.go",
+			Github_repo_url: "https://github.com/jenweani/task1",
 			Status_code:     http.StatusOK,
 		}
 
